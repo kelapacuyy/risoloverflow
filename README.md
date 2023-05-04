@@ -2,7 +2,7 @@
 
 Mata Kuliah : Struktur Data<br />
 Paralel: P1<br />
-Kelompok: 11<br />
+Kelompok: 11 (Risol Overflow)<br />
 
 ### Anggota:
 1. G6401211010 Raisya Shinta Siregar
