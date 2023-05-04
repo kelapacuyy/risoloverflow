@@ -10,14 +10,14 @@ struct todo {
     string task;
 };
 
-//nambahin new task ke list
+//nambahin jadwal baru ke list
 void addtodo() {
     system("cls");
-    cout<<"\t\t\t***********************************************************************"<<endl;
-	cout<<"\t\t\t                       WELCOME TO Your ToDo List                       "<<endl;
-    cout<<"\t\t\t***********************************************************************"<<endl<<endl<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\t                WELCOME TO Your Schedule Plan(er)                      "<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl<<endl<<endl;
     todo todo;
-    cout << "\n\tEnter new task: ";
+    cout << "\n\tEnter new schedule: ";
     cin.get();
     getline(cin, todo.task); //masukan user
     ID++; 
@@ -33,20 +33,20 @@ void addtodo() {
     write.close();
 
     char ch;
-    cout<<"Do you want to add more task? y/n"<<endl;
+    cout<<"Do you want to add more schedule? y/n"<<endl;
     cin>> ch;
 
-    //kalau mau ngebuat/nambahin task baru
+    //kalau mau ngebuat/nambahin jadwal baru
     if(ch == 'y'){
         addtodo();
     }
     else{
-        cout << "\n\tTask has been added successfully";
+        cout << "\n\tSchedule has been added successfully";
         return;
     }
 }
 
-//nampilin task (print)
+//nampilin jadwal(print)
 void print(todo s) {
     cout << "\n\tID is : " << s.id;
     cout << "\n\tTask is : " << s.task;
@@ -54,13 +54,13 @@ void print(todo s) {
 
 void readData() {
     system("cls");
-     cout<<"\t\t\t***********************************************************************"<<endl;
-	cout<<"\t\t\t                       WELCOME TO Your ToDo List                       "<<endl;
-    cout<<"\t\t\t***********************************************************************"<<endl<<endl<<endl;
+     cout<<"\t\t\t-----------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\t                 WELCOME TO Your Schedule Plan(er)                     "<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl<<endl<<endl;
     todo todo;
     ifstream read;
     read.open("todo.txt");
-    cout << "\n\t------------------Your current Tasks in the list--------------------";
+    cout << "\n\t------------------Your current Schedule in the list--------------------";
 
     while (!read.eof()) {
         read >> todo.id;
@@ -71,14 +71,14 @@ void readData() {
     read.close();
 }
 
-//nyari spesifik task
+//nyari spesifik jadwal
 int searchData() {
     system("cls");
-     cout<<"\t\t\t***********************************************************************"<<endl;
-	cout<<"\t\t\t                       WELCOME TO Your ToDo List                       "<<endl;
-    cout<<"\t\t\t***********************************************************************"<<endl<<endl<<endl;
+     cout<<"\t\t\t-----------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\t               WELCOME TO Your Schedule Plan(er)                       "<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl<<endl<<endl;
     int id;
-    cout << "\n\tEnter task id: ";
+    cout << "\n\tEnter schedule id: ";
     cin >> id;
     todo todo;
     ifstream read;
@@ -95,14 +95,14 @@ int searchData() {
     }
 }
 
-// ngehapus task
+// ngehapus jadwal
 void deleteData() {
     system("cls");
-    cout<<"\t\t\t***********************************************************************"<<endl;
-	cout<<"\t\t\t                       WELCOME TO Your ToDo List                       "<<endl;
-    cout<<"\t\t\t***********************************************************************"<<endl<<endl<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\t               WELCOME TO Your Schedule Plan(er)                       "<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl<<endl<<endl;
     int id = searchData();
-    cout << "\n\tDo you want to delete this task (y/n) : ";
+    cout << "\n\tDo you want to delete this schedule (y/n) : ";
     char choice;
     cin >> choice;
     if (choice == 'y') {
@@ -125,7 +125,7 @@ void deleteData() {
         tempFile.close();
         remove("todo.txt");
         rename("temp.txt", "todo.txt");
-        cout << "\n\tTask deleted successfuly";
+        cout << "\n\tYour schedule deleted successfuly";
     }
     else {
         cout << "\n\tRecord not deleted";
@@ -134,16 +134,16 @@ void deleteData() {
 
 void updateData() {
     system("cls");
-    cout<<"\t\t\t***********************************************************************"<<endl;
-	cout<<"\t\t\t                       WELCOME TO Your ToDo List                       "<<endl;
-    cout<<"\t\t\t***********************************************************************"<<endl<<endl<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\t               WELCOME TO Your Schedule Plan(er)                       "<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl<<endl<<endl;
     int id = searchData();
-    cout << "\n\tYou want to update this task (y/n) : ";
+    cout << "\n\tYou want to update this schedule (y/n) : ";
     char choice;
     cin >> choice;
     if (choice == 'y') {
         todo newData;
-        cout << "\n\tEnter todo task : ";
+        cout << "\n\tEnter new schedule : ";
         cin.get();
         getline(cin, newData.task);
         todo todo;
@@ -169,7 +169,7 @@ void updateData() {
         tempFile.close();
         remove("todo.txt");
         rename("temp.txt", "todo.txt");
-        cout << "\n\tTask updated successfuly";
+        cout << "\n\tSchedule updated successfuly";
     }
     else {
         cout << "\n\tRecord not deleted";
@@ -179,12 +179,11 @@ int main()
 {
     system("cls");
 	system("Color B1");
-    system("title todoapp @copyassignment");
-    cout<<"\t\t\t***********************************************************************"<<endl;
-    cout<<"\t\t\t*                                                                     *"<<endl;
-	cout<<"\t\t\t*                      WELCOME TO Your ToDo List                      *"<<endl;
-	cout<<"\t\t\t*                                                                     *"<<endl;
-    cout<<"\t\t\t***********************************************************************"<<endl<<endl<<endl<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl;
+    cout<<"\t\t\t|                                                                     |"<<endl;
+	cout<<"\t\t\t|               WELCOME TO Your Schedule Plan(er)                     |"<<endl;
+	cout<<"\t\t\t|                                                                     |"<<endl;
+    cout<<"\t\t\t-----------------------------------------------------------------------"<<endl<<endl<<endl<<endl;
     ifstream read;
     read.open("id.txt");
     if (!read.fail()) {
@@ -197,11 +196,11 @@ int main()
 
     while (true) {
         cout<<endl<<endl;
-        cout << "\n\t1.Add new to do";
-        cout << "\n\t2.See to do list";
-        cout << "\n\t3.Search to do list";
-        cout << "\n\t4.Delete to do list";
-        cout << "\n\t5.Update to do list";
+        cout << "\n\t1.Add new schedule";
+        cout << "\n\t2.See your schedule";
+        cout << "\n\t3.Search a schedule";
+        cout << "\n\t4.Delete a schedule";
+        cout << "\n\t5.Update schedule";
 
         int choice;
         cout << "\n\tEnter choice : ";
