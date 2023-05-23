@@ -1,4 +1,4 @@
-# schedule plann(er)
+# Travel Planner
 
 Mata Kuliah : Struktur Data<br />
 Paralel: P1<br />
@@ -10,4 +10,4 @@ Kelompok: 11 (Risol Overflow)<br />
 3. G6401211120 Tita Madriyanti
 
 ## Deskripsi Singkat
-Program ini menggunakan priority queue untuk menjadwalkan dan mengurutkan pekerjaan berdasarkan prioritasnya. Program ini dapat menambah, menghapus, dan memperbarui pekerjaan dalam queue<br />
+Travel planner merupakan suatu program perencana rute perjalanan yang menyesuaikan kebutuhan user. User dapat memilih rute berdasarkan 3 prioritas, yaitu harga yang paling rendah, waktu yang paling cepat, dan pemberhentian paling sedikit. Untuk menentukan rute berdasarkan harga dan waktu digunakan algoritme dijkstra, sedangkan untuk menentukan rute berdasarkan pemberhentian digunakan algoritme BFS. <br />
