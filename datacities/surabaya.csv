@@ -1,0 +1,17 @@
+origin,destination,distance,price
+Stasiun Gubeng,Siola Surabaya Museum,3.9,29
+Stasiun Gubeng,Museum WR. Soepratman,4.3,34
+Siola Surabaya Museum,Stasiun Gubeng,3.9,32
+Siola Surabaya Museum,Museum Hos Tjokroaminoto,1.7,16
+Siola Surabaya Museum,Museum Dr. Soetomo,3.0,23
+Museum Hos Tjokroaminoto,Siola Surabaya Museum,1.7,10
+Museum Hos Tjokroaminoto,Museum Dr. Soetomo,1.4,18
+Museum Dr. Soetomo,Museum Hos Tjokroaminoto,1.4,21
+Museum Dr. Soetomo,Museum Sepuluh Nopember,1.2,24
+Museum Dr. Soetomo,Museum WR. Soepratman,4.0,21
+Museum Sepuluh Nopember,Museum Dr. Soetomo,1.2,32
+Museum Sepuluh Nopember,Museum WR. Soepratman,4.0,29
+Museum WR. Soepratman,Stasiun Gubeng,4.3,38
+Museum WR. Soepratman,Siola Surabaya Museum,3.0,27
+Museum WR. Soepratman,Museum Dr. Soetomo,4.0,28
+Museum WR. Soepratman,Museum Sepuluh Nopember,4.0,32
